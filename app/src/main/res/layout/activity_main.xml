@@ -25,20 +25,14 @@
         android:id="@+id/indicatorContent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="600dp"
+        android:layout_marginTop="20dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <ImageView
-        android:id="@+id/swipe"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="650dp"
-        android:src="@drawable/swipe_login"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
 
    <androidx.coordinatorlayout.widget.CoordinatorLayout
        android:id="@+id/coordinatorr"
@@ -65,9 +59,10 @@
 
                <ImageView
                    android:id="@+id/block_black"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
+                   android:layout_width="100dp"
+                   android:layout_height="10dp"
                    android:layout_marginTop="15dp"
+                   android:src="@drawable/rect"
                    app:layout_constraintEnd_toEndOf="parent"
                    app:layout_constraintStart_toStartOf="parent"
                    app:layout_constraintTop_toTopOf="parent" />
@@ -77,7 +72,7 @@
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:layout_gravity="center_horizontal"
-                   android:layout_marginTop="20dp"
+                   android:layout_marginTop="30dp"
                    android:text="LOGIN"
                    android:textColor="@color/white"
                    android:textSize="24sp"
