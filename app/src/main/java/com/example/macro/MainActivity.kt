@@ -1,11 +1,16 @@
 package com.example.macro
 
+
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
 import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
@@ -24,12 +29,37 @@ class MainActivity : AppCompatActivity() {
         setCurrentIndicator(0)
 
         sheet = findViewById(R.id.sheet)
+        val username ="admin"
+        val pwd ="123456"
+
+        val iduser: EditText = findViewById(R.id.username_et)
+        val idpass: EditText = findViewById(R.id.password_et)
+        val btlogin: Button = findViewById(R.id.login_btn)
+
+        btlogin.setOnClickListener {
+            if (iduser.text.toString() == username && idpass.text.toString() == pwd) {
+                startTumpuan()
+            } else if (iduser.text.isEmpty() || idpass.text.isEmpty()) {
+                Toast.makeText(this, "Harap isi form login", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "Login gagal", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+
+
 
         BottomSheetBehavior.from(sheet).apply {
             peekHeight = 140
             this.state = BottomSheetBehavior.STATE_COLLAPSED
+
         }
 
+    }
+
+   private fun startTumpuan() {
+        intent = Intent(this,TumpuanActivity::class.java)
+        startActivity(intent)
     }
     private fun setOnboardingItems() {
         onboardingItemAdapter = AdptOnboarding(
@@ -91,6 +121,8 @@ class MainActivity : AppCompatActivity() {
             }
         })
         (onboardingViewPager.getChildAt(0) as RecyclerView).overScrollMode=RecyclerView.OVER_SCROLL_NEVER
+
+
 
 
 

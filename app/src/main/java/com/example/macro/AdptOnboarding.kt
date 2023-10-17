@@ -17,8 +17,8 @@ class AdptOnboarding(private val onboardingItem : List<OnboardingMacro>) :
         private val textDescription = view.findViewById<TextView>(R.id.desk)
 
         fun bin(onboardingItem :OnboardingMacro){
-            imageOnboarding.setImageResource(onboardingItem.image)
-            textTittle.text =onboardingItem.judul
+            imageOnboarding.setBackgroundResource(onboardingItem.image)
+            textTittle.text = onboardingItem.judul
             textDescription.text =onboardingItem.desk
         }
     }
