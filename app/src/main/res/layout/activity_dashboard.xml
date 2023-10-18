@@ -77,7 +77,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:contentDescription="Ikon 1"
-                    android:src="@drawable/ellipse6" />
+                    android:background="@drawable/ellipse6"
+                    android:onClick="imageButtonClicked"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -96,8 +97,9 @@
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ellipse7"
-                    android:contentDescription="Ikon 2" />
+                    android:background="@drawable/ellipse7"
+                    android:contentDescription="Ikon 2"
+                    android:onClick="imageButtonClicked"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -111,13 +113,14 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
-                android:layout_margin="30dp">
+                android:layout_margin="15dp">
 
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/group168"
-                    android:contentDescription="Ikon 3" />
+                    android:background="@drawable/group168"
+                    android:contentDescription="Ikon 3"
+                    android:onClick="imageButtonClicked"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -146,10 +149,11 @@
                 android:textColor="@color/white"
                 android:textSize="20dp"/>
 
-            <ImageView
+            <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/destin1"/>
+                android:src="@drawable/destin1"
+                android:background="@drawable/destin1"/>
 
 
             <androidx.recyclerview.widget.RecyclerView
