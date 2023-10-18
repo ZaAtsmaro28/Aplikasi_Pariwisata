@@ -11,4 +11,6 @@
     <color name="blue_light">#0075FF</color>
     <color name="bg_login">#FFD600</color>
     <color name="bgapp">#112A46</color>
+    <color name="blue_dark">#EE112A46</color>
+    <color name="blue_dark_card">#112A46</color>
 </resources>

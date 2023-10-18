@@ -16,7 +16,7 @@ class TumpuanActivity : AppCompatActivity() {
         bottomNavigation.setOnNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.nav_home -> {
-                    replaceFragment(HomeFragment())
+                    replaceFragment(DashboardActivity())
                     true
                 }
                 R.id.nav_money -> {

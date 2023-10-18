@@ -10,6 +10,7 @@ import android.widget.EditText
 import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var onboardingItemAdapter: AdptOnboarding
     private lateinit var indicatorsContainer : LinearLayout
     private lateinit var sheet : FrameLayout
+    private lateinit var registerBtn : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,6 +31,7 @@ class MainActivity : AppCompatActivity() {
         setCurrentIndicator(0)
 
         sheet = findViewById(R.id.sheet)
+        registerBtn = findViewById(R.id.regist_btn)
         val username ="admin"
         val pwd ="123456"
 
@@ -46,7 +49,9 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-
+        registerBtn.setOnClickListener {
+            startActivity(Intent(this@MainActivity, RegistActivity::class.java))
+        }
 
 
         BottomSheetBehavior.from(sheet).apply {
